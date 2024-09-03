@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Expenses</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <h2>Expense Tracker</h2>
+    <form action="/expenses/add" method="POST">
+        <input type="number" name="amount" placeholder="Expense Amount" required>
+        <input type="text" name="description" placeholder="Description" required>
+        <select name="category" required>
+            <option value="Food">Food</option>
+            <option value="Transport">Transport</option>
+            <option value="Entertainment">Entertainment</option>
+        </select>
+        <button type="submit">Add Expense</button>
+    </form>
+
+    <h3>Your Expenses</h3>
+    <!-- This section will be dynamically filled with expenses from the database -->
+    <ul>
+        <!-- Example expense entry -->
+        <li>Expense 1 <a href="/expenses/delete/1">Delete</a></li>
+    </ul>
+
+    <button onclick="alert('Buy Premium Feature Coming Soon!')">Buy Premium</button>
+</body>
+</html>
